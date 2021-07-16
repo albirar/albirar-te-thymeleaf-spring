@@ -1,0 +1,12 @@
+language: java
+jdk: openjdk8
+script:
+  - mvn clean jacoco:prepare-agent install jacoco:report -Djacoco.formats=XML
+  - bash <(curl -s https://codecov.io/bash)
+  # Change to jdk11 (sonar requirement)
+  - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
+  - chmod +x $TRAVIS_BUILD_DIR/install-jdk.sh
+  - export JAVA_HOME=$HOME/openjdk11
+  - $TRAVIS_BUILD_DIR/install-jdk.sh -F 11 --target $JAVA_HOME
+  # Execute sonar 
+  - mvn sonar:sonar
