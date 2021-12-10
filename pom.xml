@@ -8,9 +8,7 @@
 		<artifactId>albirar-te-engines</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<groupId>cat.albirar.lib</groupId>
 	<artifactId>albirar-te-thymeleaf-spring</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Albirar Template Engine for Thymeleaf-spring language</name>
 	<description>A template engine to transform thymeleaf-spring language templates</description>
@@ -69,6 +67,15 @@
 			<artifactId>thymeleaf-spring5</artifactId>
 			<version>${spring-thymeleaf.version}</version>
 		</dependency>
+
+		<!-- TEST -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
