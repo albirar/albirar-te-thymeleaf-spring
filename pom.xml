@@ -15,7 +15,7 @@
 	<url>https://github.com/albirar/albirar-te-thymeleaf-spring/</url>
 
 	<properties>
-		<sonar.projectKey>albirar_albirar-template-engine</sonar.projectKey>
+		<sonar.projectKey>albirar-te-thymeleaf-spring</sonar.projectKey>
 	</properties>
 
 	<licenses>
